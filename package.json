@@ -1,0 +1,73 @@
+{
+  "author": "Leo Urzua <d.leonardo.urzua@gmail.com>",
+  "browserslist": {
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ]
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "^3.0.1",
+    "typescript": "3.7.2"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/jest": "^24.0.13",
+    "@types/node": "^12.0.3",
+    "@types/reach__router": "^1.2.4",
+    "@types/react": "^16.8.19",
+    "@types/react-dom": "^16.8.4",
+    "dotenv": "^8.0.0",
+    "husky": "^2.3.0",
+    "jest-dom": "^3.4.0",
+    "jest-emotion": "^10.0.11",
+    "lint-staged": "^8.1.7",
+    "node-fetch": "^2.6.0",
+    "prettier": "^1.17.1",
+    "pretty-quick": "^1.11.0"
+  },
+  "engines": {
+    "node": "10.15.1",
+    "npm": "6.4.1"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts, tsx}": [
+      "npm run lint",
+      "npm run test:unit",
+      "pretty-quick --staged",
+      "git add"
+    ]
+  },
+  "name": "template-react-typescript-two",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LeoUrzua/template-react-typescript-two"
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "coverage": "react-scripts test --coverage",
+    "eject": "react-scripts eject",
+    "lint": "eslint src/ --ext .ts,.tsx ",
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "test:unit": "CI=true react-scripts test --env=jsdom --passWithNoTests"
+  },
+  "version": "0.0.0"
+}
